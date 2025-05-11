@@ -1,7 +1,12 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
+
+type PluginFunction = {
+  addUtilities: (utilities: Record<string, Record<string, string>>) => void;
+  theme: (path: string) => Record<string, any>;
+};
 
 const config = {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -74,7 +79,32 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    tailwindcssAnimate,
+    function({ addUtilities, theme }: PluginFunction) {
+      const colors = theme('colors');
+      const utilities: Record<string, Record<string, string>> = {};
+      
+      Object.entries(colors).forEach(([colorName, color]) => {
+        if (typeof color === 'object' && color !== null) {
+          Object.entries(color).forEach(([shade, value]) => {
+            if (shade === 'DEFAULT') {
+              utilities[`.bg-${colorName}`] = { backgroundColor: value as string };
+              utilities[`.text-${colorName}`] = { color: value as string };
+            } else {
+              utilities[`.bg-${colorName}-${shade}`] = { backgroundColor: value as string };
+              utilities[`.text-${colorName}-${shade}`] = { color: value as string };
+            }
+          });
+        } else {
+          utilities[`.bg-${colorName}`] = { backgroundColor: color as string };
+          utilities[`.text-${colorName}`] = { color: color as string };
+        }
+      });
+      
+      addUtilities(utilities);
+    },
+  ],
 } satisfies Config;
 
 export default config;

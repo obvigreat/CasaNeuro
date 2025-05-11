@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 
@@ -15,7 +15,7 @@ export default function ROICalculatorPage() {
 
   const [showResults, setShowResults] = useState(false);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -61,7 +61,7 @@ export default function ROICalculatorPage() {
     };
   };
 
-  const handleCalculate = (e) => {
+  const handleCalculate = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setShowResults(true);
   };
@@ -347,14 +347,14 @@ export default function ROICalculatorPage() {
 
           <div className="w-full h-[875px] overflow-hidden bg-[#1E1E1E] p-8 rounded-xl border border-[#333333] shadow-[0_0_30px_rgba(0,0,0,0.3)]">
             <iframe
-              src="https://api.leadconnectorhq.com/widget/form/MNMFfY5cuKirdAM9FHlZ"
+              src="https://api.leadconnectorhq.com/widget/form/P2JncbvHJb0xROqjr3WE"
               style={{
                 width: "100%",
                 height: "100%",
                 border: "none",
-                borderRadius: "3px",
+                borderRadius: "6px"
               }}
-              id="inline-MNMFfY5cuKirdAM9FHlZ"
+              id="inline-P2JncbvHJb0xROqjr3WE" 
               data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"
               data-trigger-value=""
@@ -362,11 +362,11 @@ export default function ROICalculatorPage() {
               data-activation-value=""
               data-deactivation-type="neverDeactivate"
               data-deactivation-value=""
-              data-form-name="Opt In Form - CasaNeuro"
-              data-height="875"
-              data-layout-iframe-id="inline-MNMFfY5cuKirdAM9FHlZ"
-              data-form-id="MNMFfY5cuKirdAM9FHlZ"
-              title="Opt In Form - CasaNeuro"
+              data-form-name="Opt In Form - CasaNeuro - Inline"
+              data-height="736"
+              data-layout-iframe-id="inline-P2JncbvHJb0xROqjr3WE"
+              data-form-id="P2JncbvHJb0xROqjr3WE"
+              title="Opt In Form - CasaNeuro - Inline"
             />
           </div>
         </div>

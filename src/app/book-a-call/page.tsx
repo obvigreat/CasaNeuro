@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import Script from "next/script";
 
 export default function BookACallPage() {
   return (
@@ -23,34 +24,23 @@ export default function BookACallPage() {
         </div>
       </section>
 
-      {/* Wave Divider */}
-      <div className="w-full overflow-hidden">
-        <svg viewBox="0 0 1200 120" className="fill-[#111111] w-full">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-        </svg>
-      </div>
-
       {/* Calendar Section */}
       <section className="bg-[#111111] py-20 px-6 md:px-20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12">
             {/* Calendar Embed */}
-            <div className="md:w-2/3 bg-[#1E1E1E] rounded-xl p-8 border border-[#333333] h-[600px] flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00FFC2]/20 flex items-center justify-center mb-6 mx-auto">
-                  <Calendar className="h-8 w-8 text-[#00FFC2]" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Booking Calendar</h3>
-                <p className="text-[#AAAAAA] mb-6">
-                  Select a date and time that works for you, and we'll confirm
-                  your appointment.
-                </p>
-                <div className="bg-[#0A0A0A] p-4 rounded-lg border border-[#333333] text-sm text-[#AAAAAA]">
-                  <p>Calendar embed would appear here</p>
-                  <p className="mt-2">
-                    (Integration with GoHighLevel calendar)
-                  </p>
-                </div>
+            <div className="md:w-2/3 bg-[#1E1E1E] rounded-xl p-8 border border-[#333333] h-auto flex items-center justify-center">
+              <div className="w-full">
+                <iframe 
+                  src="https://api.leadconnectorhq.com/widget/booking/TUPWzmOJrTS0kVQ4oeAt" 
+                  style={{width: "100%", border: "none", overflow: "hidden"}} 
+                  scrolling="no" 
+                  id="TUPWzmOJrTS0kVQ4oeAt_1746939459083"
+                />
+                <Script 
+                  src="https://link.msgsndr.com/js/form_embed.js" 
+                  strategy="afterInteractive"
+                />
               </div>
             </div>
 

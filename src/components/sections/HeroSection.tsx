@@ -27,6 +27,7 @@ export default function HeroSection({
 }: HeroSectionProps) {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const [isAutoPopupOpen, setIsAutoPopupOpen] = useState(true);
 
   useEffect(() => {
     // Load the form embed script
@@ -126,37 +127,47 @@ export default function HeroSection({
         </svg>
       </div>
 
-      {/* Lead Capture Form Popup */}
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/form/MNMFfY5cuKirdAM9FHlZ"
-        style={{
-          display: "none",
-          width: "100%",
-          height: "950px",
-          border: "none",
-          borderRadius: "3px",
-        }}
-        id="popup-MNMFfY5cuKirdAM9FHlZ"
-        data-layout="{'id':'POPUP'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Opt In Form - CasaNeuro"
-        data-height="950"
-        data-layout-iframe-id="popup-MNMFfY5cuKirdAM9FHlZ"
-        data-form-id="MNMFfY5cuKirdAM9FHlZ"
-        title="Opt In Form - CasaNeuro"
-      />
+      {/* Auto Lead Capture Form Popup */}
+      <Dialog open={isAutoPopupOpen} onOpenChange={setIsAutoPopupOpen}>
+        <DialogContent className="bg-[#1E1E1E] border-[#333333] text-white max-w-3xl">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-white">
+              
+            </DialogTitle>
+          </DialogHeader>
+          <div className="w-full h-[875px] overflow-hidden">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/MNMFfY5cuKirdAM9FHlZ"
+              style={{
+                width: "100%",
+                height: "100%",
+                border: "none",
+                borderRadius: "3px",
+              }}
+              id="auto-popup-MNMFfY5cuKirdAM9FHlZ"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Opt In Form - CasaNeuro"
+              data-height="875"
+              data-layout-iframe-id="auto-popup-MNMFfY5cuKirdAM9FHlZ"
+              data-form-id="MNMFfY5cuKirdAM9FHlZ"
+              title="Opt In Form - CasaNeuro"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Form Dialog */}
       <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
         <DialogContent className="bg-[#1E1E1E] border-[#333333] text-white max-w-3xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white">
-              Get Started
+              
             </DialogTitle>
           </DialogHeader>
           <div className="w-full h-[875px] overflow-hidden">

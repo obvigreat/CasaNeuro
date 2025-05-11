@@ -18,25 +18,11 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Wave Divider */}
-      <div className="w-full overflow-hidden">
-        <svg viewBox="0 0 1200 120" className="fill-[#111111] w-full">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-        </svg>
-      </div>
-
       {/* Features Grid */}
       <FeaturesGrid />
 
       {/* Metrics Bar */}
       <MetricsBar />
-
-      {/* Wave Divider */}
-      <div className="w-full overflow-hidden">
-        <svg viewBox="0 0 1200 120" className="fill-[#0A0A0A] w-full">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-        </svg>
-      </div>
 
       {/* Demo Section */}
       <section className="bg-[#0A0A0A] py-20 px-6 md:px-20">
@@ -112,13 +98,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Wave Divider */}
-      <div className="w-full overflow-hidden">
-        <svg viewBox="0 0 1200 120" className="fill-[#111111] w-full">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-        </svg>
-      </div>
 
       {/* Client Logos */}
       <section className="bg-[#111111] py-20 px-6 md:px-20">
@@ -285,120 +264,33 @@ export default function Home() {
               <div className="bg-[#00FFC2]/20 rounded-full p-1">
                 <Check className="h-4 w-4 text-[#00FFC2]" />
               </div>
-              <span className="text-sm">Free 14-day trial</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="bg-[#00FFC2]/20 rounded-full p-1">
-                <Check className="h-4 w-4 text-[#00FFC2]" />
-              </div>
-              <span className="text-sm">No credit card required</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="bg-[#00FFC2]/20 rounded-full p-1">
-                <Check className="h-4 w-4 text-[#00FFC2]" />
-              </div>
-              <span className="text-sm">Cancel anytime</span>
+              <span className="text-sm">90 Day (50% Money back Guarantee)</span>
             </div>
           </div>
 
           <div className="bg-[#1E1E1E] p-8 rounded-xl border border-[#333333] shadow-[0_0_30px_rgba(0,0,0,0.3)]">
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label
-                    htmlFor="firstName"
-                    className="block text-sm text-left font-medium"
-                  >
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    placeholder="John"
-                    className="w-full bg-[#0A0A0A] border border-[#333333] rounded-md p-3 focus:border-[#00FFC2] focus:ring-1 focus:ring-[#00FFC2] outline-none transition"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="lastName"
-                    className="block text-sm text-left font-medium"
-                  >
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    placeholder="Doe"
-                    className="w-full bg-[#0A0A0A] border border-[#333333] rounded-md p-3 focus:border-[#00FFC2] focus:ring-1 focus:ring-[#00FFC2] outline-none transition"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label
-                  htmlFor="email"
-                  className="block text-sm text-left font-medium"
-                >
-                  Work Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="john@company.com"
-                  className="w-full bg-[#0A0A0A] border border-[#333333] rounded-md p-3 focus:border-[#00FFC2] focus:ring-1 focus:ring-[#00FFC2] outline-none transition"
-                />
-              </div>
-              <div className="space-y-2">
-                <label
-                  htmlFor="phone"
-                  className="block text-sm text-left font-medium"
-                >
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  placeholder="(123) 456-7890"
-                  className="w-full bg-[#0A0A0A] border border-[#333333] rounded-md p-3 focus:border-[#00FFC2] focus:ring-1 focus:ring-[#00FFC2] outline-none transition"
-                />
-              </div>
-              <div className="space-y-2">
-                <label
-                  htmlFor="company"
-                  className="block text-sm text-left font-medium"
-                >
-                  Company Name
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  placeholder="Acme Inc."
-                  className="w-full bg-[#0A0A0A] border border-[#333333] rounded-md p-3 focus:border-[#00FFC2] focus:ring-1 focus:ring-[#00FFC2] outline-none transition"
-                />
-              </div>
-              <div className="space-y-2">
-                <label
-                  htmlFor="businessType"
-                  className="block text-sm text-left font-medium"
-                >
-                  Business Type
-                </label>
-                <select
-                  id="businessType"
-                  className="w-full bg-[#0A0A0A] border border-[#333333] rounded-md p-3 focus:border-[#00FFC2] focus:ring-1 focus:ring-[#00FFC2] outline-none transition appearance-none"
-                >
-                  <option value="">Select your business type</option>
-                  <option value="cleaning">Cleaning Services</option>
-                  <option value="landscaping">Landscaping</option>
-                  <option value="plumbing">Plumbing</option>
-                  <option value="electrical">Electrical</option>
-                  <option value="hvac">HVAC</option>
-                  <option value="other">Other Home Services</option>
-                </select>
-              </div>
-              <Button className="w-full bg-[#00FFC2] hover:bg-[#00FFC2]/90 text-black font-semibold py-6 rounded-md uppercase tracking-wide shadow-[0_0_15px_rgba(0,255,194,0.5)] hover:shadow-[0_0_25px_rgba(0,255,194,0.6)] transition-all">
-                Schedule Your Demo
-              </Button>
-            </form>
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/P2JncbvHJb0xROqjr3WE"
+              style={{
+                width: "100%",
+                height: "736px",
+                border: "none",
+                borderRadius: "6px"
+              }}
+              id="inline-P2JncbvHJb0xROqjr3WE" 
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Opt In Form - CasaNeuro - Inline"
+              data-height="736"
+              data-layout-iframe-id="inline-P2JncbvHJb0xROqjr3WE"
+              data-form-id="P2JncbvHJb0xROqjr3WE"
+              title="Opt In Form - CasaNeuro - Inline"
+            />
           </div>
 
           <div className="mt-6 flex items-center justify-center gap-2 text-sm text-[#AAAAAA]">
