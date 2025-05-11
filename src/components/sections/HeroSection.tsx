@@ -54,9 +54,45 @@ export default function HeroSection({
           {title} <span className="text-[#00FFC2]">{accentText}</span>
         </h1>
 
-        <p className="text-xl text-[#AAAAAA] max-w-2xl mb-10 mx-auto">
+        <p className="text-xl text-[#AAAAAA] max-w-2xl mb-6 mx-auto">
           {subtitle}
         </p>
+
+        {/* VSL Placeholder */}
+        <div
+          className="relative max-w-3xl mx-auto mb-10 rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,255,194,0.2)] cursor-pointer"
+          onClick={() => setIsDemoOpen(true)}
+        >
+          <div className="aspect-video bg-[#111111] relative">
+            <img
+              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80"
+              alt="AI Home Services Dashboard"
+              className="w-full h-full object-cover opacity-70"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+              <div className="w-20 h-20 rounded-full bg-[#00FFC2]/20 flex items-center justify-center backdrop-blur-sm border border-[#00FFC2]/30">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#00FFC2"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div className="absolute bottom-4 left-4 right-4 text-white text-left">
+              <p className="text-sm font-medium bg-black/50 inline-block px-3 py-1 rounded-full text-[#00FFC2] backdrop-blur-sm">
+                Watch Video Demo
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
